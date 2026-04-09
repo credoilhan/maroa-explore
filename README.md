@@ -8,44 +8,64 @@
     body { margin: 0; font-family: Arial, sans-serif; color: #333; }
 
     nav {
-      position: fixed; width: 100%; background: rgba(0,0,0,0.7);
-      color: white; display: flex; justify-content: space-between; padding: 10px 20px;
+      position: fixed; width: 100%; background: rgba(0,0,0,0.8);
+      color: white; display: flex; justify-content: space-between; padding: 15px 20px;
+      z-index: 1000;
     }
 
-    nav a { color: white; margin: 0 10px; text-decoration: none; }
+    nav a { color: white; margin: 0 10px; text-decoration: none; font-weight: bold; }
 
     header {
-      background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') center/cover;
-      height: 90vh; color: white;
+      background: url('https://images.unsplash.com/photo-1544551763-46a013bb70d5') center/cover;
+      height: 100vh; color: white;
       display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
     }
 
-    header h1 { font-size: 3rem; margin: 0; }
-    header p { font-size: 1.2rem; }
+    header h1 { font-size: 3.5rem; margin: 0; }
+    header p { font-size: 1.3rem; }
 
     .btn {
-      background: #00bcd4; color: white; padding: 10px 20px;
-      border-radius: 5px; text-decoration: none; margin-top: 10px;
-      display: inline-block;
+      background: #00bcd4; color: white; padding: 12px 25px;
+      border-radius: 30px; text-decoration: none; margin-top: 10px;
+      display: inline-block; font-weight: bold;
     }
 
-    section { padding: 60px 20px; text-align: center; }
+    .whatsapp {
+      position: fixed; bottom: 20px; right: 20px;
+      background: #25D366; color: white;
+      padding: 15px 20px; border-radius: 50px;
+      text-decoration: none; font-weight: bold;
+    }
+
+    section { padding: 70px 20px; text-align: center; }
 
     .services {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px;
     }
 
     .card {
-      background: #f4f4f4; padding: 20px; border-radius: 10px;
+      background: #f4f4f4; padding: 25px; border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     }
 
-    form {
-      max-width: 500px; margin: auto; text-align: left;
+    .gallery img {
+      width: 100%; border-radius: 10px; margin: 10px 0;
     }
+
+    form { max-width: 500px; margin: auto; text-align: left; }
 
     input, textarea, select {
       width: 100%; padding: 10px; margin: 10px 0;
       border-radius: 5px; border: 1px solid #ccc;
+    }
+
+    .testimonials {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;
+    }
+
+    .testimonial {
+      background: #fff; padding: 20px; border-radius: 10px;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
     }
 
     footer { background: #222; color: white; text-align: center; padding: 20px; }
@@ -58,76 +78,72 @@
   <div>
     <a href="#">Accueil</a>
     <a href="#services">Services</a>
-    <a href="#about">À propos</a>
-    <a href="#inscription">Inscription</a>
+    <a href="#gallery">Galerie</a>
+    <a href="#inscription">Réservation</a>
     <a href="#contact">Contact</a>
   </div>
 </nav>
 
 <header>
-  <h1>Découvrez Maroantsetra</h1>
-  <p>Excursions, nature sauvage et aventures inoubliables</p>
-  <a href="#inscription" class="btn">S'inscrire maintenant</a>
+  <h1>Maroa Explore</h1>
+  <p>Explorez Maroantsetra autrement 🌴</p>
+  <a href="#inscription" class="btn">Réserver maintenant</a>
 </header>
 
 <section id="services">
-  <h2>Nos Services</h2>
+  <h2>Nos Offres</h2>
   <div class="services">
-    <div class="card"><h3>🌿 Wildlife Tours</h3><p>Explorez la biodiversité unique</p></div>
-    <div class="card"><h3>🥾 Trekking</h3><p>Randonnées guidées</p></div>
-    <div class="card"><h3>🏝️ Excursions</h3><p>Nosy Mangabe & alentours</p></div>
-    <div class="card"><h3>🏡 Culture locale</h3><p>Immersion village</p></div>
+    <div class="card"><h3>🌿 Wildlife Tours</h3><p>Découvrez la faune unique</p></div>
+    <div class="card"><h3>🥾 Trekking</h3><p>Aventure guidée</p></div>
+    <div class="card"><h3>🏝️ Nosy Mangabe</h3><p>Excursion île</p></div>
+    <div class="card"><h3>🏡 Culture locale</h3><p>Immersion totale</p></div>
   </div>
 </section>
 
-<section id="about">
-  <h2>À propos</h2>
-  <p>Maroa Explore organise des excursions uniques à Maroantsetra avec guides locaux et expériences authentiques.</p>
+<section id="gallery">
+  <h2>Galerie</h2>
+  <div class="gallery">
+    <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470">
+    <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e">
+    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
+  </div>
+</section>
+
+<section>
+  <h2>Avis clients</h2>
+  <div class="testimonials">
+    <div class="testimonial">⭐️⭐️⭐️⭐️⭐️<br>Expérience incroyable !</div>
+    <div class="testimonial">⭐️⭐️⭐️⭐️⭐️<br>Guide professionnel et sympa</div>
+    <div class="testimonial">⭐️⭐️⭐️⭐️⭐️<br>Je recommande fortement</div>
+  </div>
 </section>
 
 <section id="inscription">
-  <h2>Inscription</h2>
-  <p>Réservez votre aventure en remplissant le formulaire ci-dessous :</p>
-
+  <h2>Réservation</h2>
   <form action="mailto:credoilhan@gmail.com" method="post" enctype="text/plain">
-    <label>Nom complet</label>
-    <input type="text" placeholder="Votre nom" required>
-
-    <label>Email</label>
-    <input type="email" placeholder="Votre email" required>
-
-    <label>Téléphone / WhatsApp</label>
-    <input type="text" placeholder="Votre numéro" required>
-
-    <label>Type d'excursion</label>
+    <input type="text" placeholder="Nom" required>
+    <input type="email" placeholder="Email" required>
+    <input type="text" placeholder="WhatsApp" required>
     <select>
       <option>Wildlife Tour</option>
       <option>Trekking</option>
       <option>Excursion île</option>
-      <option>Culture locale</option>
     </select>
-
-    <label>Date souhaitée</label>
     <input type="date">
-
-    <label>Message / Détails</label>
-    <textarea placeholder="Nombre de personnes, demandes spéciales..."></textarea>
-
-    <button type="submit" class="btn">Envoyer la demande</button>
+    <textarea placeholder="Détails..."></textarea>
+    <button type="submit" class="btn">Envoyer</button>
   </form>
-
-  <p><strong>Processus :</strong></p>
-  <p>1. Vous remplissez le formulaire<br>
-     2. Nous vous contactons rapidement<br>
-     3. Confirmation et organisation du voyage</p>
 </section>
 
 <section id="contact">
   <h2>Contact</h2>
   <p>📞 +261 37 88 690 55</p>
   <p>📧 credoilhan@gmail.com</p>
-  <p>📍 Maroantsetra, Madagascar</p>
 </section>
+
+<a href="https://wa.me/261378869055?text=Bonjour%20je%20veux%20réserver%20une%20excursion" class="whatsapp">
+  WhatsApp
+</a>
 
 <footer>
   <p>© 2026 Maroa Explore</p>
